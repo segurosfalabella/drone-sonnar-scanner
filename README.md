@@ -1,6 +1,6 @@
-# Sonnar Scanner CLI
+# SonnarQube Scanner CLI
 
-Drone plugin for using with Sonnar Scanner CLI 3.x
+Drone plugin for using with SonnarQube Scanner CLI 3.2.x
 
 ## Usage
 ```yaml
