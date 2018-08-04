@@ -26,9 +26,7 @@ PLUGIN_VERBOSE=${PLUGIN_VERBOSE:-"false"}
 
 # SONAR command
 SONAR_PARAMS=""
-
 addArgument() {
-  echo $1
   SONAR_PARAMS="${SONAR_PARAMS} $1"
 }
 
@@ -44,4 +42,4 @@ if [[ $PLUGIN_LOG_LEVEL != "false" ]] ; then addArgument "-Dsonar.log.level=$PLU
 if [[ $PLUGIN_VERBOSE != "false" ]] ; then addArgument "-Dsonar.verbose =$PLUGIN_VERBOSE" ; fi
 
 echo "Executing Sonar ClI"
-java -jar /opt/sonar/sonar-scanner-cli.jar $SONAR_PARAMS
+java -jar /opt/sonar/sonar-scanner-cli.jar "$SONAR_PARAMS"
